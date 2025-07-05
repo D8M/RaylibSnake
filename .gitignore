@@ -1,0 +1,21 @@
+# Ignore CMake build directory
+cmake-build-*/
+CMakeFiles/
+Makefile
+CMakeCache.txt
+*.cmake
+
+# Ignore CLion/JetBrains project files
+.idea/
+*.iml
+
+# Ignore user-specific files
+*.user
+*.swp
+*.swo
+
+# Ignore binaries and object files
+*.exe
+*.out
+*.obj
+*.o
