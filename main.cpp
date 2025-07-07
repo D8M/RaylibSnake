@@ -16,6 +16,16 @@ class Snake
 {
 public:
     deque<Vector2> body = {Vector2{6,9}, Vector2{5,9}, Vector2{4,9} };
+
+    void Draw()
+    {
+        for (int i = 0; i < body.size(); i++)
+        {
+            int x = body[i].x;
+            int y = body[i].y;
+            DrawRectangle( x*cellSize, y*cellSize, cellSize, cellSize, darkGreen);
+        }
+    }
 };
 
 class Food {
@@ -64,6 +74,7 @@ int main() {
 
     //Create Objects
     Food food = Food();
+    Snake snake = Snake();
 
 
 
@@ -74,6 +85,7 @@ int main() {
         //Drawing
         ClearBackground(green);
         food.Draw();
+        snake.Draw();
 
 
         EndDrawing();
