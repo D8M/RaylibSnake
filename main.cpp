@@ -1,5 +1,6 @@
-#include<raylib.h>
+#include <raylib.h>
 #include <iostream>
+#include <deque>
 
 using namespace std;
 
@@ -11,6 +12,12 @@ Color red = {255, 0, 0, 255};
 int cellSize = 30;
 int cellCount = 25;
 
+class Snake
+{
+public:
+    deque<Vector2> body = {Vector2{6,9}, Vector2{5,9}, Vector2{4,9} };
+};
+
 class Food {
 
 public:
@@ -21,6 +28,7 @@ public:
     { //Constructor
       Image image = LoadImage("textures/food.png");
         texture = LoadTextureFromImage(image);
+        
         UnloadImage(image);
         position = GenerateRandomPos();
     }
